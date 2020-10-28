@@ -53,9 +53,9 @@ class Groovy(commands.AutoShardedBot):
         self.session = aiohttp.ClientSession(loop=self.loop)
         self.updating = False
         if self.debug is True:
-            self.prefix = 'gt!'
+            self.prefix = '>'
         else:
-            self.prefix = 'g!'
+            self.prefix = '>'
         self.postgre_client = PostgreClient(self.config['database']['user'], self.config['database']['password'],
                                             self.config['database']['database'], self.config['database']['host'])
 
@@ -74,9 +74,9 @@ class Groovy(commands.AutoShardedBot):
 
         logger.info('Logging in ...')
         if self.debug is True:
-            self.run(self.config['test_bot']['token'])
+            self.run(self.config['test_bot']['NzY5Mjk4MjI3Mjk5NDgzNjkw.X5M-zg._b-qpWcWYTi3T1hsTXMHqWhJWNM'])
         else:
-            self.run(self.config['main_bot']['token'])
+            self.run(self.config['main_bot']['NzY5Mjk4MjI3Mjk5NDgzNjkw.X5M-zg._b-qpWcWYTi3T1hsTXMHqWhJWNM'])
 
     async def on_ready(self):
         logger.info(f'Successfully logged in as {self.user.name}!')
